@@ -20,14 +20,24 @@ class ProductRepository extends ServiceEntityRepository
     }
 
 
-    public function findByTime($value)
+    public function findByCategory($value)
     {
         return $this->createQueryBuilder('p')
-            ->orderBy('p.time', 'ASC')
+            ->where('p.category = :value')->setParameter('value', $value)
+            ->orderBy('p.updatedAt', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
+    }
+
+    public function findImages()
+    {
+        return $this->createQueryBuilder('p')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+            ;
     }
 
 }

@@ -1,0 +1,19 @@
+{% block body %}
+    {% for product in products %}
+        <div class="card text-center">
+            <div class="card-header">
+                {{ product.category }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <img src="../uploads/images/products/{{ product.image }}">
+                <p class="card-text">{{ product.description }}.</p>
+                <a href="#" class="btn btn-primary">{{ product }}</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{ product.price }} &#8372;
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}
