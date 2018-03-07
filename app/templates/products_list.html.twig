@@ -1,19 +1,38 @@
 {% block body %}
-    {% for product in products %}
-        <div class="card text-center">
-            <div class="card-header">
-                {{ product.category }}
+    {#{% for product in products %}#}
+        {#<div class="card text-center">#}
+            {#<div class="card-header">#}
+                {#{{ product.category }}#}
+            {#</div>#}
+            {#<div class="card-body">#}
+                {#<h5 class="card-title">{{ product.title }}</h5>#}
+                {#<img src="../uploads/images/products/{{ product.image }}">#}
+                {#<p class="card-text">{{ product.description }}.</p>#}
+                {#<a href="#" class="btn btn-primary">{{ product }}</a>#}
+            {#</div>#}
+            {#<div class="card-footer text-muted">#}
+                {#{{ product.price }} &#8372;#}
+            {#</div>#}
+        {#</div>#}
+        {#<br>#}
+    {#{% endfor %}#}
+
+    <div class="products-list">
+        {% for product in products %}
+            <div class="card">
+                <div class="card-header">
+                    <h5>{{ product.title }}</h5>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><img style="max-width: 135px" src="../uploads/images/products/{{ product.image }}"></h5>
+                    <h2><span class="badge badge-secondary">{{ product.price }}  &#8372</span></h2>
+
+                    <p class="card-text">{{ [product.description|slice(0,250), '...']|join('') }}</p>
+                    <a href="{{ path('product', {'id' : product.id}) }}" class="btn btn-primary">Reed more</a>
+
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">{{ product.title }}</h5>
-                <img src="../uploads/images/products/{{ product.image }}">
-                <p class="card-text">{{ product.description }}.</p>
-                <a href="#" class="btn btn-primary">{{ product }}</a>
-            </div>
-            <div class="card-footer text-muted">
-                {{ product.price }} &#8372;
-            </div>
-        </div>
-        <br>
-    {% endfor %}
+
+        {% endfor %}
+    </div>
 {% endblock %}

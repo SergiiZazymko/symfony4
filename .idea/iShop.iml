@@ -21,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/easycorp/easy-log-handler" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/easycorp/easyadmin-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jms/metadata" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/kohkimakimoto/adminer-cli" />
@@ -33,6 +34,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/config" />
@@ -68,6 +70,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/security" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/security-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/swiftmailer-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/templating" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/twig-bridge" />

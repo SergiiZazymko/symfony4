@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -18,11 +19,13 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank()
      */
     private $message;
 
@@ -33,13 +36,21 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $email;
+
+    public function __toString()
+    {
+        return $this->title;
+    }
 
     /**
      * @return mixed
@@ -71,6 +82,7 @@ class Contact
     public function setTitle($title): void
     {
         $this->title = $title;
+        $this->setTime(new \DateTime());
     }
 
     /**

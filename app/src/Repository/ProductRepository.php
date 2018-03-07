@@ -24,7 +24,7 @@ class ProductRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('p')
             ->where('p.category = :value')->setParameter('value', $value)
-            ->orderBy('p.updatedAt', 'ASC')
+            ->orderBy('p.updatedAt', 'DESC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -35,6 +35,15 @@ class ProductRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('p')
             ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findAllDesk()
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.updatedAt', 'DESC')
             ->getQuery()
             ->getResult()
             ;

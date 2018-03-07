@@ -23,7 +23,7 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="Product", mappedBy="category", fetch="EAGER")
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
      */
     private $products;
 

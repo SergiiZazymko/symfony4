@@ -1,0 +1,20 @@
+.main
+{
+    margin-top: 70px;
+}
+
+.card
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.badge
+{
+    background-color: #0fad19;
+}
+
+.card-body image
+{
+    max-height: 200px
+}

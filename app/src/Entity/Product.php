@@ -44,7 +44,7 @@ class Product
     private $imageFile;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="products", fetch="EAGER")
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="products", fetch="LAZY")
      */
     private $category;
     /**
@@ -53,7 +53,7 @@ class Product
     private $price;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="products")
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="products", fetch="LAZY")
      */
     private $tags;
 

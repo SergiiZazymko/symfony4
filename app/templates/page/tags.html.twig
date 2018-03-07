@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set colors = ['primary', 'secondary', 'success', 'danger','warning', 'info', 'info', 'dark'] %}
+    {% for tag in tags %}
+        <a href="{{ path('tag', {'id' : tag.id}) }}" type="submit" class="btn btn-{{ random(colors) }}">{{ tag }}</a>
+    {% endfor %}
+{% endblock %}

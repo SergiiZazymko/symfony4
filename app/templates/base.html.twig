@@ -13,7 +13,7 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
           integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('build/css/index.css') }}" />
+    <link rel="stylesheet" href="/build/css/custom-styles.css" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -40,13 +40,13 @@
                         <a class="nav-link" href="{{ path('categories') }}">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tags</a>
+                        <a class="nav-link" href="{{ path('tags') }}">Tags</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="{{ path('contact') }}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{{ path('about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: darkblue" href="{{ path('easyadmin') }}">Admin (only for administrators)</a>
@@ -59,7 +59,6 @@
 
 
 <main role="main" class="container main">
-    <h1>Example heading <span class="badge badge-secondary">New</span></h1>
     {% include('flash_messages.html.twig') %}
     {% block body %}{% endblock %}
 </main>

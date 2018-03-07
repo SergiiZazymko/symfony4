@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}iShop | {{ product.title }}{% endblock %}
+
+{% block body %}
+
+    <div class="card text-center">
+    <div class="card-header">
+    {{ product.category }}, id: {{ product.id }}
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">{{ product.title }}</h5>
+    <img style="max-height: 189px" src="../uploads/images/products/{{ product.image }}">
+    <p class="card-text">{{ product.description }}.</p>
+    <a href="#" class="btn btn-primary">Add to basket {{ product }}</a>
+    </div>
+    <div class="card-footer">
+        <h5> {{ product.price }} &#8372; </h5>
+    </div>
+    </div>
+
+{% endblock %}
